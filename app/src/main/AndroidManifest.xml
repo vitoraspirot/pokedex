@@ -17,7 +17,7 @@
         android:theme="@style/Theme.Pokedexandroid"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.feature.pokemon_list.PokemonListActivity"
+            android:name=".presentation.feature.pokemonlist.PokemonListActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

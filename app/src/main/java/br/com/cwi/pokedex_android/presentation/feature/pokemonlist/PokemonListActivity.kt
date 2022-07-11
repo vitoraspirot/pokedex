@@ -1,19 +1,22 @@
-package br.com.cwi.pokedex_android.presentation.feature.pokemon_list
+package br.com.cwi.pokedex_android.presentation.feature.pokemonlist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.cwi.pokedex_android.data.repository.PokemonListRepository
+import br.com.cwi.pokedex_android.data.mapper.PokemonListMapper
+import br.com.cwi.pokedex_android.data.repository.PokemonListRepositoryImpl
 import br.com.cwi.pokedex_android.databinding.ActivityPokemonListBinding
+import br.com.cwi.pokedex_android.domain.repository.PokemonListRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class PokemonListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPokemonListBinding
 
-    private val repository = PokemonListRepository()
+    private val repository : PokemonListRepository = PokemonListRepositoryImpl(
+        PokemonListMapper()
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
