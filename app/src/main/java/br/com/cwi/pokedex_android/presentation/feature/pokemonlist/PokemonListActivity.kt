@@ -1,42 +1,29 @@
 package br.com.cwi.pokedex_android.presentation.feature.pokemonlist
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.cwi.pokedex_android.data.mapper.PokemonListMapper
-import br.com.cwi.pokedex_android.data.repository.PokemonListRepositoryImpl
+import androidx.appcompat.app.AppCompatActivity
 import br.com.cwi.pokedex_android.databinding.ActivityPokemonListBinding
-import br.com.cwi.pokedex_android.domain.repository.PokemonListRepository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class PokemonListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPokemonListBinding
 
-    private val repository : PokemonListRepository = PokemonListRepositoryImpl(
-        PokemonListMapper()
-    )
+    private val viewModel = PokemonListViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPokemonListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setUpPokemonList()
+
+        setUpViewModel()
     }
 
-    private fun setUpPokemonList() {
-
-        CoroutineScope(Dispatchers.Main).launch {
-            val pokeList = repository.getPokemonList().pokemonList
+    private fun setUpViewModel() {
+        viewModel.pokemonList.observe(this@PokemonListActivity) { list ->
             val recyclerView = binding.rvPokemonList
-
-            pokeList.let { list ->
-                recyclerView.adapter = PokemonListAdapter(context = this@PokemonListActivity, list)
-            }
-
+            recyclerView.adapter = PokemonListAdapter(context = this@PokemonListActivity, list)
         }
-
+        viewModel.fetchPokemonList()
     }
 
 }
