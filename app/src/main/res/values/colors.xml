@@ -54,6 +54,7 @@
 
     <color name="dragon_type_background">#A089FA</color>
     <color name="dragon_type_tag">#8875D2</color>
+
     <color name="light_gray">#F7F7F7</color>
     <color name="dark_gray">#363636</color>
 </resources>

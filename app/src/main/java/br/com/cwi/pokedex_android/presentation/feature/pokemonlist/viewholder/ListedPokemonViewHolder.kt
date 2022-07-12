@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.cwi.pokedex_android.R
 import br.com.cwi.pokedex_android.databinding.ItemListedPokemonBinding
 import br.com.cwi.pokedex_android.domain.entity.ListedPokemon
+import br.com.cwi.pokedex_android.presentation.extension.firstLetterUpperCase
 import com.bumptech.glide.Glide
 
 class ListedPokemonViewHolder(item: View) : RecyclerView.ViewHolder(item) {
@@ -19,10 +20,7 @@ class ListedPokemonViewHolder(item: View) : RecyclerView.ViewHolder(item) {
     fun bind(context: Context, item: ListedPokemon, pokemonId: Int) {
 
         tvListedPokemonNumber.text = "#${pokemonId}"
-
-        val firstLetter = item.pokemonName[0].uppercase()
-        val listedPokemonName = firstLetter + item.pokemonName.substring(1, item.pokemonName.length)
-        tvListedPokemonName.text = listedPokemonName
+        tvListedPokemonName.text = item.pokemonName.firstLetterUpperCase()
 
         val spriteUrl = "https://cdn.traction.one/pokedex/pokemon/${pokemonId}.png"
         Glide.with(context).load(spriteUrl).placeholder(R.drawable.pokemon_placeholder)

@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/activity_pokemon_details.xml" value="0.33" />
-        <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/activity_pokemon_list.xml" value="0.33" />
+        <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/activity_pokemon_list.xml" value="0.75" />
         <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/item_listed_pokemon.xml" value="0.5497881355932204" />
+        <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/view_error.xml" value="0.8243559718969555" />
+        <entry key="..\:/Users/vitor/Documents/CWI/android-training/pokedex-android/app/src/main/res/layout/view_loading.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
