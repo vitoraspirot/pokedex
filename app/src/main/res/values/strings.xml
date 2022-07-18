@@ -3,4 +3,8 @@
     <string name="txt_error_message_title">Opss, algo deu errado</string>
     <string name="txt_error_message_subtitle">Tente novamente mais tarde</string>
     <string name="txt_try_again">Tentar novamente</string>
+    <string name="txt_pokemons">Pokemons</string>
+    <string name="txt_hall_of_fame">Hall Of Fame</string>
+    <string name="txt_pokedex">Pokedex</string>
+    <string name="txt_add_pokemons_to_your_hall_of_fame">Add Pokemons to your hall of fame!</string>
 </resources>

@@ -7,7 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_50">#FFFFFF80</color>
+    <color name="white_50">#99FFFFFF</color>
+    <color name="light_gray">#F7F7F7</color>
+    <color name="dark_gray">#292929</color>
+    <color name="pokedex">#FF4A4A</color>
 
     <!--    Types-->
     <color name="electric_type_background">#FFEE59</color>
@@ -54,7 +57,4 @@
 
     <color name="dragon_type_background">#A089FA</color>
     <color name="dragon_type_tag">#8875D2</color>
-
-    <color name="light_gray">#F7F7F7</color>
-    <color name="dark_gray">#363636</color>
 </resources>
